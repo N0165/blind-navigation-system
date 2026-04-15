@@ -28,12 +28,12 @@ def check_password_strength(password):
     if re.search(r"[A-Z]", password):
         score += 1
     else:
-        feedback.append("Add uppercase letter")
+        feedback.append("Add uppercase letters")
 
     if re.search(r"[a-z]", password):
         score += 1
     else:
-        feedback.append("Add lowercase letter")
+        feedback.append("Add lowercase letters")
 
     if re.search(r"[0-9]", password):
         score += 1
@@ -43,7 +43,7 @@ def check_password_strength(password):
     if re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
         score += 2
     else:
-        feedback.append("Add special character")
+        feedback.append("Add special characters")
 
     if score >= 6:
         strength = "Strong"
